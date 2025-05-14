@@ -1,4 +1,7 @@
-torch
-transformers
+fastapi>=0.109.0
+uvicorn>=0.27.0
+transformers>=4.37.0
+torch>=2.2.0
+python-multipart
 gradio>=4.0
-librosa  # For audio processing
+librosa  
