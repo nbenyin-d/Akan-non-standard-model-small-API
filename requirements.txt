@@ -1,0 +1,4 @@
+torch
+transformers
+gradio>=4.0
+librosa  # For audio processing
