@@ -14,7 +14,7 @@ asr_pipeline = pipeline(
 async def transcribe(file: UploadFile = File(...)):
     audio_bytes = await file.read()
     result = asr_pipeline(audio_bytes)
-    transript = result["text"]
+    transcript = result["text"]
     return {"transcript": transcript}
 
 if __name__ == "__main__":
