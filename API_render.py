@@ -17,9 +17,6 @@ async def transcribe(file: UploadFile = File(...)):
     transript = result["text"]
     return {"transcript": transcript}
 
-import nest_asyncio
-nest_asyncio.apply()
-
 if __name__ == "__main__":
     import uvicorn
     port = int(os.environ.get("PORT", 10000))  # Use Render's PORT or default to 10000
