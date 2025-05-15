@@ -77,7 +77,7 @@ async def transcribe(file: UploadFile = File(...)):
         logger.error(f"Error during transcription: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Error during transcription: {str(e)}")
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     import uvicorn
     port = int(os.environ.get("PORT", 10000))  # Use Render's PORT or default to 10000
     
