@@ -1,4 +1,4 @@
-# api.py - Enhanced API with proper error handling and wake-up endpoint
+# API_render.py - Enhanced API with proper error handling and wake-up endpoint
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from transformers import pipeline
 import uvicorn
@@ -24,9 +24,11 @@ app.add_middleware(
 # Initialize the ASR pipeline with error handling
 try:
     logger.info("Loading ASR model...")
+    device = 0 if torch.cuda.is_available() else -1  # Use GPU if available
     asr_pipeline = pipeline(
         "automatic-speech-recognition",
         model="Tree-Diagram/whisper-small_Akan_non_standardspeech"
+        device=device
     )
     logger.info("ASR model loaded successfully")
 except Exception as e:
