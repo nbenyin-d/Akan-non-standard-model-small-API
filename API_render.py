@@ -9,7 +9,7 @@ import logging
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(_name_)
+logger = logging.getLogger(__name__)
 
 app = FastAPI(title="Akan ASR_nonstandard_small_API", description="Transcribes non-standard Akan audio to text")
 
