@@ -27,7 +27,7 @@ try:
     device = 0 if torch.cuda.is_available() else -1  # Use GPU if available
     asr_pipeline = pipeline(
         "automatic-speech-recognition",
-        model="Tree-Diagram/whisper-small_Akan_non_standardspeech"
+        model="Tree-Diagram/whisper-small_Akan_non_standardspeech",
         device=device
     )
     logger.info("ASR model loaded successfully")
@@ -86,4 +86,4 @@ if __name__ == "__main__":
     # Log startup information
     logger.info(f"Starting server on port {port}")
     
-    uvicorn.run(API_render:app, host="0.0.0.0", port=port)
+    uvicorn.run("API_render:app", host="0.0.0.0", port=port)
