@@ -11,7 +11,7 @@ import logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-app = FastAPI(title="Akan ASR_nonstandard_small_API", description="Transcribes non-standard Akan audio to text")
+app = FastAPI(title="Akan-non-standard-model-small-API", description="Transcribes non-standard Akan audio to text")
 
 # Add CORS configuration
 app.add_middleware(
