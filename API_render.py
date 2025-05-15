@@ -86,4 +86,4 @@ if __name__ == "__main__":
     # Log startup information
     logger.info(f"Starting server on port {port}")
     
-    uvicorn.run(app, host="0.0.0.0", port=port)
+    uvicorn.run(API_render:app, host="0.0.0.0", port=port)
