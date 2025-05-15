@@ -35,7 +35,7 @@ except Exception as e:
     logger.error(f"Failed to load ASR model: {str(e)}")
     asr_pipeline = None
 
-@app.get("/")
+@app.get("/", methods=["GET", "HEAD"])
 async def root():
     """Wake-up endpoint for the API"""
     return {"message": "Akan ASR API is running", "status": "ok"}
